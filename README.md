@@ -7,12 +7,29 @@
 
 <br>
 
-## 목차
-- [Tech Stack](#tech-stack)
+## Index
 - [Overview](#overview)
+- [Tech Stack](#tech-stack)
 - [Key Features](#key-features)
 - [Core Implementation](#core-implementation)
   
+<br>
+
+## Overview
+
+공중 화장실 안내 서비스는 단순 위치 정보만으로는 실제 이용 판단에 필요한 정보가 부족합니다.
+
+ToiletNearBy Backend는 사용자 위치를 기준으로 주변 화장실을 조회하고, 사용자 후기, 평점, 비밀번호 공유, Kakao 장소 검색을 함께 제공하도록 설계했습니다.
+
+구현 과정에서는 다음 기준을 중심으로 백엔드 구조를 구성했습니다.
+
+- JWT 인증은 Spring Security OAuth2 Resource Server 기반으로 처리
+- DTO가 도메인에 직접 침투하지 않도록 DTO/VO/Domain 역할 분리
+- Service가 Spring Data JPA에 직접 의존하지 않도록 Repository interface와 JPA adapter 분리
+- 성능 측정 기능은 외부 API로 노출하지 않고 console runner로 분리
+- 민감할 수 있는 비밀번호 수정 값은 URL path가 아니라 request body로 전달
+- 초기 데이터는 애플리케이션 API가 아니라 DB import 절차로 관리
+
 <br>
 
 ## Tech Stack
@@ -37,23 +54,6 @@
 [![Mockito](https://img.shields.io/badge/Mockito-78A641?style=for-the-badge)](https://site.mockito.org/)
 [![MockMvc](https://img.shields.io/badge/MockMvc-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://docs.spring.io/spring-framework/reference/testing/spring-mvc-test-framework.html)
 [![Spring Boot Test](https://img.shields.io/badge/Spring%20Boot%20Test-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://docs.spring.io/spring-boot/reference/testing/)
-
-<br>
-
-## Overview
-
-공중 화장실 안내 서비스는 단순 위치 정보만으로는 실제 이용 판단에 필요한 정보가 부족합니다.
-
-ToiletNearBy Backend는 사용자 위치를 기준으로 주변 화장실을 조회하고, 사용자 후기, 평점, 비밀번호 공유, Kakao 장소 검색을 함께 제공하도록 설계했습니다.
-
-구현 과정에서는 다음 기준을 중심으로 백엔드 구조를 구성했습니다.
-
-- JWT 인증은 Spring Security OAuth2 Resource Server 기반으로 처리
-- DTO가 도메인에 직접 침투하지 않도록 DTO/VO/Domain 역할 분리
-- Service가 Spring Data JPA에 직접 의존하지 않도록 Repository interface와 JPA adapter 분리
-- 성능 측정 기능은 외부 API로 노출하지 않고 console runner로 분리
-- 민감할 수 있는 비밀번호 수정 값은 URL path가 아니라 request body로 전달
-- 초기 데이터는 애플리케이션 API가 아니라 DB import 절차로 관리
 
 <br>
 
