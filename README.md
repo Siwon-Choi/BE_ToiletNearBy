@@ -12,7 +12,7 @@
 - [Overview](#overview)
 - [Key Features](#key-features)
 - [Core Implementation](#core-implementation)
-- 
+  
 <br>
 
 ## Tech Stack
