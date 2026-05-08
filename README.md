@@ -6,27 +6,11 @@
 
 
 <br>
-
 ## 목차
-
 - [Tech Stack](#tech-stack)
-  - [Backend](#backend)
-  - [Database / Cache](#database--cache)
-  - [Test](#test)
 - [Overview](#overview)
 - [Key Features](#key-features)
-  - [1. 사용자 인증](#1-사용자-인증)
-  - [2. 화장실 조회](#2-화장실-조회)
-  - [3. 후기 / 평점](#3-후기--평점)
-  - [4. 비밀번호 공유](#4-비밀번호-공유)
-  - [5. 장소 검색](#5-장소-검색)
-  - [6. 위치 검색 최적화](#6-위치-검색-최적화)
-  - [7. Benchmark](#7-benchmark)
 - [Core Implementation](#core-implementation)
-  - [JWT Authentication](#jwt-authentication)
-  - [Nearby Toilet Search](#nearby-toilet-search)
-  - [Grid Cache](#grid-cache)
-
 <br>
 
 ## Tech Stack
