@@ -4,12 +4,14 @@
 
 사용자의 현재 위치를 기준으로 주변 화장실을 조회하고, 후기, 평점, 비밀번호 공유, Kakao 장소 검색을 함께 제공하는 REST API 서버입니다.
 
+<p align="center">
+  <img src="./docs/assets/toiletNearBy.gif" alt="ToiletNearBy demo" width="720">
+</p>
 
 <br>
 
 ## Index
 - [Overview](#overview)
-- [Demo](#demo)
 - [Tech Stack](#tech-stack)
 - [Key Features](#key-features)
 - [Core Implementation](#core-implementation)
@@ -30,17 +32,6 @@ ToiletNearBy Backend는 사용자 위치를 기준으로 주변 화장실을 조
 - 성능 측정 기능은 외부 API로 노출하지 않고 console runner로 분리
 - 민감할 수 있는 비밀번호 수정 값은 URL path가 아니라 request body로 전달
 - 초기 데이터는 애플리케이션 API가 아니라 DB import 절차로 관리
-
-<br>
-
-## Demo
-
-<p align="center">
-  <video src="./docs/assets/toiletNearBy.mp4" controls width="720"></video>
-</p>
-
-> GitHub 환경에서 영상 미리보기가 보이지 않으면 아래 링크로 확인할 수 있습니다.  
-> [toiletNearBy.mp4](./docs/assets/toiletNearBy.mp4)
 
 <br>
 
