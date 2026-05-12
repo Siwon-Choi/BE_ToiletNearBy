@@ -2,7 +2,9 @@
 
 위치 기반 공중 화장실 검색과 사용자 후기 공유 기능을 제공하는 Spring Boot 백엔드 프로젝트입니다.
 
-사용자의 현재 위치를 기준으로 주변 화장실을 조회하고, 후기, 평점, 비밀번호 공유, Kakao 장소 검색을 함께 제공하는 REST API 서버입니다.
+위치(사용자 위치 혹은 검색한 위치)를 기준으로 주변 화장실을 조회하고
+
+후기, 평점, 비밀번호 공유, Kakao 장소 검색을 함께 제공하는 REST API 서버입니다.
 
 <p align="center">
   <img src="./docs/assets/toiletNearBy.gif" alt="ToiletNearBy demo" width="720">
