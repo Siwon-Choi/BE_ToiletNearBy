@@ -1,0 +1,73 @@
+name: Publish API Docs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Start application
+        run: |
+          chmod +x ./gradlew
+          ./gradlew bootRun --args='--spring.profiles.active=local' > app.log 2>&1 &
+          echo $! > app.pid
+
+      - name: Export OpenAPI spec
+        run: |
+          for i in {1..60}; do
+            if curl -fsS http://localhost:8080/v3/api-docs -o openapi.json; then
+              exit 0
+            fi
+            sleep 2
+          done
+
+          cat app.log
+          exit 1
+
+      - name: Stop application
+        if: always()
+        run: |
+          if [ -f app.pid ]; then
+            kill "$(cat app.pid)" || true
+          fi
+
+      - name: Build static Swagger UI
+        run: |
+          mkdir -p public
+          cp docs/swagger/index.html public/index.html
+          cp openapi.json public/openapi.json
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

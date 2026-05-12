@@ -49,6 +49,13 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         // 브라우저의 사전 CORS 요청 통과
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                        // Swagger UI와 OpenAPI 문서는 로그인 없이 확인할 수 있다.
+                        .requestMatchers(
+                                "/swagger-ui.html",
+                                "/swagger-ui/**",
+                                "/v3/api-docs",
+                                "/v3/api-docs/**"
+                        ).permitAll()
                         // 회원가입과 로그인 통과
                         .requestMatchers(
                                 HttpMethod.POST,

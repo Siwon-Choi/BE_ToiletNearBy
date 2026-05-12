@@ -12,6 +12,7 @@
 
 ## Index
 - [Overview](#overview)
+- [API Docs](#api-docs)
 - [Tech Stack](#tech-stack)
 - [Key Features](#key-features)
 - [Core Implementation](#core-implementation)
@@ -32,6 +33,20 @@ ToiletNearBy Backend는 사용자 위치를 기준으로 주변 화장실을 조
 - 성능 측정 기능은 외부 API로 노출하지 않고 console runner로 분리
 - 민감할 수 있는 비밀번호 수정 값은 URL path가 아니라 request body로 전달
 - 초기 데이터는 애플리케이션 API가 아니라 DB import 절차로 관리
+
+<br>
+
+## API Docs
+
+[![Swagger UI](https://img.shields.io/badge/Swagger%20UI-GitHub%20Pages-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](https://siwon-choi.github.io/BE_ToiletNearBy/)
+
+API 문서는 `main` 브랜치에 push될 때 GitHub Actions에서 OpenAPI 스펙을 생성하고, GitHub Pages에 Swagger UI로 배포합니다.
+
+로컬 실행 중에는 아래 주소에서도 확인할 수 있습니다.
+
+```text
+http://localhost:8080/swagger-ui/index.html
+```
 
 <br>
 
