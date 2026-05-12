@@ -38,14 +38,26 @@
 
 ToiletNearBy Backend는 사용자 위치를 기준으로 주변 화장실을 조회하고, 사용자 후기, 평점, 비밀번호 공유, Kakao 장소 검색을 함께 제공하도록 설계했습니다.
 
-구현 과정에서는 다음 기준을 중심으로 백엔드 구조를 구성했습니다.
+설계 단계에서는 다음 세 가지를 중심에 두고 백엔드 구조를 잡았습니다.
 
-- JWT 인증은 Spring Security OAuth2 Resource Server 기반으로 처리
-- DTO가 도메인에 직접 침투하지 않도록 DTO/VO/Domain 역할 분리
-- Service가 Spring Data JPA에 직접 의존하지 않도록 Repository interface와 JPA adapter 분리
-- 성능 측정 기능은 외부 API로 노출하지 않고 console runner로 분리
-- 민감할 수 있는 비밀번호 수정 값은 URL path가 아니라 request body로 전달
-- 초기 데이터는 애플리케이션 API가 아니라 DB import 절차로 관리
+<br>
+
+**1. 인증 / 인가**
+
+JWT 인증을 Spring Security OAuth2 Resource Server 기반으로 처리합니다.
+
+<br>
+
+**2. Clean Architecture 기반 계층 분리**
+
+- **2-1)** DTO가 도메인에 직접 침투하지 않도록 DTO / VO / Domain 역할 분리
+- **2-2)** Service가 Spring Data JPA에 직접 의존하지 않도록 Repository interface와 JPA adapter 분리
+
+<br>
+
+**3. 민감 정보 처리**
+
+비밀번호 수정 값은 URL path가 아니라 request body로 전달합니다.
 
 <br>
 
