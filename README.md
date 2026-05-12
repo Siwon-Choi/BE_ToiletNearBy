@@ -20,13 +20,12 @@
 
 <br>
 
-## Index
-- [Overview](#overview)
-- [API Docs](#api-docs)
-- [Tech Stack](#tech-stack)
-- [Key Features](#key-features)
-- [Core Implementation](#core-implementation)
-  
+<div align="center">
+
+[Overview](#overview)&nbsp;&nbsp;•&nbsp;&nbsp;[API Docs](#api-docs)&nbsp;&nbsp;•&nbsp;&nbsp;[Tech Stack](#tech-stack)&nbsp;&nbsp;•&nbsp;&nbsp;[Key Features](#key-features)&nbsp;&nbsp;•&nbsp;&nbsp;[Core Implementation](#core-implementation)
+
+</div>
+
 <br>
 
 ## Overview
