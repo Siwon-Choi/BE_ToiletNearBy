@@ -38,11 +38,11 @@ ToiletNearBy Backend는 사용자 위치를 기준으로 주변 화장실을 조
 
 ## API Docs
 
-[![Swagger UI](https://img.shields.io/badge/Swagger%20UI-GitHub%20Pages-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](https://siwon-choi.github.io/BE_ToiletNearBy/)
+[![Static Swagger UI](https://img.shields.io/badge/Static%20Swagger%20UI-GitHub%20Pages-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](https://siwon-choi.github.io/BE_ToiletNearBy/)
 
-API 문서는 `main` 브랜치에 push될 때 GitHub Actions에서 OpenAPI 스펙을 생성하고, GitHub Pages에 Swagger UI로 배포합니다.
+API 문서는 `main` 브랜치에 push될 때 GitHub Actions에서 OpenAPI 스펙을 생성하고, GitHub Pages에 정적 Swagger UI로 게시합니다.
 
-로컬 실행 중에는 아래 주소에서도 확인할 수 있습니다.
+GitHub Pages 문서는 API 명세 확인용 정적 문서입니다. 실제 API 호출 테스트는 애플리케이션을 로컬에서 실행한 뒤 아래 주소에서 확인할 수 있습니다.
 
 ```text
 http://localhost:8080/swagger-ui/index.html
