@@ -22,7 +22,11 @@
 
 <div align="center">
 
-[Overview](#overview)&nbsp;&nbsp;•&nbsp;&nbsp;[API Docs](#api-docs)&nbsp;&nbsp;•&nbsp;&nbsp;[Tech Stack](#tech-stack)&nbsp;&nbsp;•&nbsp;&nbsp;[Key Features](#key-features)&nbsp;&nbsp;•&nbsp;&nbsp;[Core Implementation](#core-implementation)
+[![Overview](https://img.shields.io/badge/Overview-2C2C2C?style=for-the-badge)](#overview)
+[![API Docs](https://img.shields.io/badge/API_Docs-2C2C2C?style=for-the-badge)](#api-docs)
+[![Tech Stack](https://img.shields.io/badge/Tech_Stack-2C2C2C?style=for-the-badge)](#tech-stack)
+[![Key Features](https://img.shields.io/badge/Key_Features-2C2C2C?style=for-the-badge)](#key-features)
+[![Core Implementation](https://img.shields.io/badge/Core_Implementation-2C2C2C?style=for-the-badge)](#core-implementation)
 
 </div>
 
